@@ -46,7 +46,7 @@ public class ViewTripActivity extends AppCompatActivity {
                             cursor1 = db.rawQuery("Select * from Expense where id1 = " + roll + ";" , null);
                             String details = "Trip ID  " + roll + "\n" + "From:  " + boarding + "\n" + "Destination:  " + destination1 + "\n" + "Start Date:  " + startDate1 + "\n" + "End Date:  " + endDate1 + "\n" + "Number of people:  " + number + "\n";
                             while(cursor1.moveToNext()) {
-                                details = details + "Approved Budget is:  " + cursor1.getInt(1) + "\n" + "\n";
+                                details = details + "Approved Budget:  " + cursor1.getInt(1) + "\n" + "\n";
                             }
                             tv1.append(details);
 
